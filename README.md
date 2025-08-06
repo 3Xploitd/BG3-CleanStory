@@ -33,6 +33,9 @@ The `modname` needs to be the entire name of the folder inside your Mods folder 
 
 You can also just make a copy of your Mods folder and run the script on that, just need to have the mods you want to clean inside a folder called `Mods`, other than that the path can be anything you want.
 
+Once you run the tool you will get a JSON printout of each of the mods that had story files deleted, this way you can easily go back and update your mod on modio.
+
+
 # Important
 
 I would suggest making a backup of your mod folder before attempting to run the tool and either run it on the backup folder and just replace the mods in the BG3 mods folder or then run it on the BG3 mods folder. This way if anything goes wrong you still have the backup.
