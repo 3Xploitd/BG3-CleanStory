@@ -58,7 +58,7 @@ def bg3_delete_story_files(mods_directory,mod_list):
             mods_json['mods'][mod_name.name] = deleted_files
     logfile = f'storyfiles_cleaned_{time()}'
     
-    if len(mods_json) != 0:
+    if len(mods_json) > 20:
 
         with open(logfile,'a') as fh:
             fh.write(json.dumps(mods_json,indent=4))
@@ -75,6 +75,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
     if Path('config.json').is_file():
         config = json.loads(open('config.json','r').read())['BG3_Directory']
+        if config == "":
+            config = args.source_directory
     else:
         config = args.source_directory
 
