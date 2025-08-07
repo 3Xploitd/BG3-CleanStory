@@ -12,22 +12,22 @@ These files are created by the BG3 tookit story editor and are not needed. Keepi
 # Usage
 
 ```
-usage: bg3_clean_story.py [-h] [-s SOURCE_DIRECTORY] [-d DIRECTIVE]
+usage: bg3_clean_story.py [-h] [-s SOURCE_DIRECTORY] [-m MOD]
 
 options:
   -h, --help            show this help message and exit
-  -s SOURCE_DIRECTORY, --source-directory SOURCE_DIRECTORY
+  -s, --source-directory SOURCE_DIRECTORY
                         The full path of your BG3 Data directory
-  -d DIRECTIVE, --directive DIRECTIVE
-                        The mod name you want to remove bloated story files from, if you want to do it for all mods then
-                        specify "ALL"
+  -m, --mod MOD         The mod name (the entire modname ex.TESTMOD_67d6dc31-b234-46fb-b8f9-11611b7a16bb) you want to
+                        remove bloated story files from. If you want to do it for all mods then specify "ALL" or omit
+                        this comandline option
 ```
 
-Neither commandline option is necessary but if you don't specify them the script will assume your BG3 Data folder is `C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\Data\` and that you want to clean all mods of the files.
+Neither commandline option is necessary but if you don't specify them the script will assume your BG3 Data folder is `C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\Data\` and that you want to clean all mods of the files. There is also a config file `config.json` if you specify your path there if it is different than the default you don't have to specify the path each time.
 
 If you'd like to just clean a single mod run the following command:
 
-`python bg3_clean_story.py -d <modname>` 
+`python bg3_clean_story.py -m <modname>` 
 
 The `modname` needs to be the entire name of the folder inside your Mods folder if you are just cleaning a single mod, otherwise you can omit the commandline option and it will automatically find all of the mods for you.
 
