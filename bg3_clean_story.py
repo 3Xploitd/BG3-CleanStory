@@ -54,11 +54,13 @@ def bg3_delete_story_files(mods_directory,mod_list):
         except Exception as e:
             print(e)
             continue
+        print(deleted_files)
         if deleted_files != []:
             mods_json['mods'][mod_name.name] = deleted_files
+            print(mods_json)
     logfile = f'storyfiles_cleaned_{time()}'
     
-    if len(mods_json) > 20:
+    if mods_json['mods'] != {}:
 
         with open(logfile,'a') as fh:
             fh.write(json.dumps(mods_json,indent=4))
